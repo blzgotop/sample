@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<% unless flash[:notice].blank? %>
+  <%=  javascript_tag "alert(#{flash[:notice].to_s});"%>
+<% end %>
+<p>
+  <b>Name:</b>
+  <%= @book.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @book.email %>
+</p>
+
+<p>
+  <b>Desc:</b>
+  <%= @book.desc %>
+</p>
+
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', books_path %>

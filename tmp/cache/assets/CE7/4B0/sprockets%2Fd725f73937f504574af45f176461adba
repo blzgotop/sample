@@ -1,0 +1,29 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1323080766.078125:@value{	I"length:ETiI"digest;
+T"%3f2b43c86f44301d0950369cd04dc392I"source;
+TI"// check current product add it watch list
+function check_watchlist(id){
+    $.ajax({
+        alert: '11111111111',
+        url: "/books/index/",
+        type: 'POST',
+        cache: false,
+        timeout: 1000,
+        data:  id,
+        date: "json",
+        async: false,
+        error: function(){
+            alert('Error Occured');
+        },
+        success: function(data){
+             books = Books.find_by_id(5)
+            if (books){
+                alert('Error Occured');
+            }
+        }
+    });
+}
+
+;
+;
+TI"_version;
+T"%cf7ce9bde6840c9450c85fe56c51c3a0

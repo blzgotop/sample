@@ -1,0 +1,11 @@
+<h1>Ajax show</h1>
+Click this link to show the current <%= link_to "time", :action => "time" %>
+
+<%= javascript_include_tag :defaults %>
+<h1>Ajax show</h1>
+Click this link to show the current
+<%= link_to_remote "time",
+    :update => 'time_div',
+    :url => {:action => "time"} %>.<br/>
+<div id='time_div'>
+</div>

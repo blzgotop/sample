@@ -1,0 +1,43 @@
+<%= javascript_include_tag "prototype" %>
+<%= javascript_include_tag "effects" %>
+<%= javascript_include_tag "controls" %>
+
+<h1>Listing books</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Desc</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+<% @books.each do |book| %>
+  <tr>
+    <td><%= book.name %></td>
+    <td><%= book.email %></td>
+    <td><%= book.desc %></td>
+    <td><%= link_to 'Show', book %></td>
+    <td><%= link_to 'Edit', edit_book_path(book) %></td>
+    <td><%= link_to 'Destroy', delete_path(book.id), confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to "Visit Other Site", "http://www.rubyonrails.org/", :confirm => "Are you sure?" %></td>
+    <td></td>
+    <td></td>
+    <td><%= link_to "check", edit_book_path(book), :onclick => "check_watchlist('5')" %></td>
+  </tr>
+<% end %>
+</table>
+<% unless flash[:notice].blank? %>
+  <%=  javascript_tag "alert(#{flash[:notice]})"%>
+<% end %>
+<br />
+
+<%= link_to 'New Book', new_book_path %>
+
+<a name="fb_share" type="icon_link" share_url="http://www.sohu.com/" >Compartir en Facebook</a>
+<script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share"
+        type="text/javascript">
+</script>
+
+

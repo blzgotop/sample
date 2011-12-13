@@ -1,0 +1,31 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+## YAML Template.
+en:
+  # Active Record models configuration
+  activerecord:
+    errors:
+      messages:
+        taken: "has already been taken"
+        record_invalid: "Validation failed: %{errors}"
+      models:
+        books:
+          blank: "This is a custom blank message for %{model}: %{attribute}"
+          attributes:
+            name:
+              blank: "This is a custom blank message for User login"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
